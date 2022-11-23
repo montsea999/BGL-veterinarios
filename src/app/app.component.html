@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row text-center h1 tituloClase bg-success bg-gradient text-light p-1">
+    <div class="col-1"><a><img src="../../../assets/gifAvatarMontserrat.jpg" class="miAvatar navbar-brand" alt="hola" /></a></div>
+  <div class="col-11 text-light">BGL veterinarios</div>
+</div>
+<div class="container-fluid">
+<div class="bgComponent row justify-content-center align-items-center g-2">
+  <!--Out5-->
+  <div class="col-lg-4 componenteCrear"><app-crear-cita (nuevaCitaOh)="agregarCita($event)"></app-crear-cita></div>
+  <div class="col-lg-2"></div>
+<!--In 1-->
+  <div class="col-lg-4 componenteCitas mt-1 mb-1">
+    <app-list-citas [listadoCitasI]="listCitas"
+    (citaaeliminar)="eliminarcitadelArray($event)"
+    >
+  </app-list-citas>
+</div>
+</div></div></div>
+
+

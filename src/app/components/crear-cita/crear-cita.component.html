@@ -1,0 +1,33 @@
+<div class="card text-success mt-2">
+  <div class="card-body">
+    <div class="text-center">
+      <span *ngIf="formularioKO" class="badge bg-danger text-center">Todos los campos deben cumplimentarse</span>
+    </div>
+    <ng-container *ngIf="!formularioKO" class="card-title h3 text-center">
+      <h3 class="text-center">CREAR CITA</h3>
+    </ng-container>
+    <div class="form-group mb-3">
+      <label for="name" class="form-label h6">Nombre</label>
+      <input [(ngModel)]="nombreF" type="text" name="" id="name" class="form-control"
+        placeholder="Nombre del propietario de la mascota" aria-describedby="helpId">
+    </div>
+    <div class="form-group mb-3">
+      <label for="date" class="form-label h6">Fecha</label>
+      <input [(ngModel)]="fechaF" type="date" name="" id="date" class="form-control" placeholder=""
+        aria-describedby="helpId">
+      <small id="helpId" class="text-muted">Fecha</small>
+    </div>
+    <div class="form-group mb-3">
+      <label for="time" class="form-label h6">Hora</label>
+      <input [(ngModel)]="horaF" type="time" name="" id="time" class="form-control" placeholder=""
+        aria-describedby="helpId">
+      <small id="helpId" class="text-muted">Hora</small>
+    </div>
+    <div class="form-group mb-3">
+      <label for="sintomas" class="form-label h6">Síntomas</label>
+      <textarea [(ngModel)]="sintomasF" class="form-control" name="sintomas" id="sintomas" rows="3"
+        placeholder="Sintomatología de la mascota"></textarea>
+    </div>
+    <button style="width:100%;" (click)="agregarCita()" class="btn btn-primary btn-block ">Crear cita</button>
+  </div>
+</div>

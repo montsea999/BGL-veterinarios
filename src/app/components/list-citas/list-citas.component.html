@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div *ngIf="listadoCitasI.length===0" class="card bg-light text-success bg-gradient mt-1">
+      <div class="card-body">
+        <h4 class="card-title text-warning h5 text-center">NO HAY CITAS PARA MOSTRAR</h4>
+      </div>
+    </div>
+    <!--In 3 -->
+    <div *ngIf="listadoCitasI.length>0" class="container-fluid bg-gradient mt-1">
+
+      <h2 class="sombreado card-title text-success text-center">LISTADO DE CITAS</h2>
+    </div>
+
+    <div *ngFor="let cita of listadoCitasI; let i = index" class="card bg-light text-dark bg-gradient mt-1 mb-1">
+      <div class="card-body">
+        <p class="card-text"><span class="h6 mr-2">Nombre:</span>&nbsp;{{ cita.n}}</p>
+        <p class="card-text"><span class="h6 mr-2">Fecha:</span>&nbsp;{{ cita.f}}</p>
+        <p class="card-text"><span class="h6 mr-2">Hora:</span>&nbsp;{{ cita.h}}</p>
+        <p class="card-text"><span class="h6 mr-2">Síntomas de la mascota:</span>&nbsp;{{ cita.s}}</p>
+        <button (click)="eliminaCita(i)" style="width: 100%;" class="btn btn-danger btn-block">ELIMINAR</button>
+      </div>
+    </div>
+  </div>
+</div>
